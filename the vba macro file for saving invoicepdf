@@ -1,0 +1,11 @@
+
+Sub saveinvoice()
+Dim saverng As Range
+Dim pdfname As String
+Dim path As String
+
+Set saverng = Range("A1:F35")
+pdfname = Range("B8") & "" & Range("F3")
+path = "E:\INVOICE\"
+saverng.ExportAsFixedFormat xITypePDF, Filename:=path & pdfname
+End Sub
